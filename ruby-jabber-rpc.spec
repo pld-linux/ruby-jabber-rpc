@@ -5,11 +5,12 @@ Summary:	Jabber-RPC library for Ruby
 Summary(pl):	Biblioteka Jabber-RPC dla jêzyka Ruby
 Name:		ruby-jabber-rpc
 Version:	0.0.20041208
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
-Source0:	http://jabber-rpc.rubyforge.org/jabber-rpc.tar.gz
-# Source0-md5:	340021bcf4b1dabbfc7f1153e7e5cc73
+# from http://jabber-rpc.rubyforge.org via darcs
+Source0:	jabber-rpc-20041208.tar.gz
+# Source0-md5:	a5151ae6806def5c5ddeb4a7500e2fc6
 Source1:	setup.rb
 URL:		http://jabber-rpc.rubyforge.org/
 BuildRequires:	ruby
@@ -25,15 +26,15 @@ Jabber-RPC library for Ruby.
 Biblioteka Jabber-RPC dla jêzyka Ruby.
 
 %prep
-%setup -q -n jabber-rpc
+%setup -q -n jabber-rpc.rubyforge.org
 
 %build
 mkdir lib/jabber -p
 mv rpc.rb lib/jabber/rpc.rb
 install %{SOURCE1} setup.rb
 ruby setup.rb config \
-	--rb-dir=%{ruby_rubylibdir} \
-	--so-dir=%{ruby_archdir}
+	--siterubyver=%{ruby_rubylibdir} \
+	--sodir=%{ruby_archdir}
 
 ruby setup.rb setup
 
