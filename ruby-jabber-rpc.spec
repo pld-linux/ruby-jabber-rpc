@@ -10,9 +10,9 @@ Source0:	jabber-rpc-20041208.tar.gz
 # Source0-md5:	a5151ae6806def5c5ddeb4a7500e2fc6
 Source1:	setup.rb
 URL:		http://jabber-rpc.rubyforge.org/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 Requires:	ruby-jabber4r
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
