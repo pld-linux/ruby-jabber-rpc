@@ -1,5 +1,5 @@
 Summary:	Jabber-RPC library for Ruby
-Summary(pl.UTF-8):   Biblioteka Jabber-RPC dla języka Ruby
+Summary(pl.UTF-8):	Biblioteka Jabber-RPC dla języka Ruby
 Name:		ruby-jabber-rpc
 Version:	0.0.20041208
 Release:	3
